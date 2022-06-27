@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_cubit/constants/constants.dart';
-import 'package:flutter_weather_cubit/cubits/temp_settings/temp_settings_cubit.dart';
-import 'package:flutter_weather_cubit/cubits/weather/weather_cubit.dart';
-import 'package:flutter_weather_cubit/pages/search_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_weather_cubit/pages/settins_page.dart';
-import 'package:flutter_weather_cubit/widgets/error_dialog.dart';
+import 'package:flutter_weather_cubit_listener/constants/constants.dart';
+import 'package:flutter_weather_cubit_listener/cubits/temp_settings/temp_settings_cubit.dart';
+import 'package:flutter_weather_cubit_listener/cubits/weather/weather_cubit.dart';
+import 'package:flutter_weather_cubit_listener/pages/search_page.dart';
+import 'package:flutter_weather_cubit_listener/pages/settins_page.dart';
+import 'package:flutter_weather_cubit_listener/widgets/error_dialog.dart';
 import 'package:recase/recase.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,10 +23,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text('Weather'),
+        title: const Text('Weather'),
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             onPressed: () async {
               _city = await Navigator.push(
                 context,
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SettingsPage();
+                    return const SettingsPage();
                   },
                 ),
               );
@@ -156,7 +156,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Text(
                   showTemperature(state.weather.temp),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 30.0,
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         showTemperature(state.weather.tempMax),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16.0,
                         ),
                       ),
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         showTemperature(state.weather.tempMin),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16.0,
                         ),
                       ),
@@ -192,13 +192,13 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Spacer(),
+                const Spacer(),
                 showIcon(state.weather.icon),
                 Expanded(
                   flex: 3,
                   child: formatText(state.weather.description),
                 ),
-                Spacer(),
+               const Spacer(),
               ],
             )
           ],

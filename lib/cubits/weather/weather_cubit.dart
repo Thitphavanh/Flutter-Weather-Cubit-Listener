@@ -1,10 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_weather_cubit_listener/models/custom_error.dart';
+import 'package:flutter_weather_cubit_listener/models/weather.dart';
+import 'package:flutter_weather_cubit_listener/repositories/weather_repository.dart';
 
-import 'package:flutter_weather_cubit/models/custom_error.dart';
-import 'package:flutter_weather_cubit/models/weather.dart';
-import 'package:flutter_weather_cubit/repositories/weather_repository.dart';
 
 part 'weather_state.dart';
 

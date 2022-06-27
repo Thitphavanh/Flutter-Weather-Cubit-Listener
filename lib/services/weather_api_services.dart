@@ -1,12 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
-
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_weather_cubit/constants/constants.dart';
-import 'package:flutter_weather_cubit/exceptions/weather_exception.dart';
-import 'package:flutter_weather_cubit/models/direct_geocoding.dart';
-import 'package:flutter_weather_cubit/models/weather.dart';
-import 'package:flutter_weather_cubit/services/http_error_handler.dart';
+import 'package:flutter_weather_cubit_listener/constants/constants.dart';
+import 'package:flutter_weather_cubit_listener/exceptions/weather_exception.dart';
+import 'package:flutter_weather_cubit_listener/models/direct_geocoding.dart';
+import 'package:flutter_weather_cubit_listener/models/weather.dart';
+import 'package:flutter_weather_cubit_listener/services/http_error_handler.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherApiServices {
